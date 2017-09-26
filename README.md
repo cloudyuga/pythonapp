@@ -2,7 +2,7 @@
 # Pythonapp
 We have created the new Docker image `teamcloudyuga/pythonprog` with given `Dockerfile`. This image is using `python:2.7` as its base image. In it's `Dockerfile`, we have specified the all the configurations and the `ENTRYPOINT` instruction. All of the programs are copied inside the container at `/app/program/` with name `p1.py`, `p2.py`. We can choose to have it outside as well. 
 
-While running the container we pass the program name as environment variable, which becomes an agrument `demo.py` program. `demo.py` program takes the program name from environment variable and executes it. The output of the program get inside the `/app/program/output` folder, which is being mounted from `/mnt/shared` directory of the host system. So all of the outputs are saved on host system `/mnt/shared` directory, with `.txt` suffix. So for program `p1.py`, the output would be saved as `p1.py.txt` 
+While running the container we pass the program name as environment variable, which becomes an agrument `demo.py` program. `demo.py` program takes the program name from environment variable and executes it. The output of the program get saved inside the `/app/program/output` folder, which is being mounted from `/mnt/shared` directory of the host system. So all of the outputs are saved on host system `/mnt/shared` directory, with `.txt` suffix. So for program `p1.py`, the output would be saved as `p1.py.txt` 
 
 Following is the workflow and some examples. 
 
