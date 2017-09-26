@@ -23,3 +23,14 @@ $ docker run --rm -it -e PROGRAM_NAME='p24.py' -v /mnt/shared/:/app/program/outp
 output will be stored in file /mnt/shared/p24.py.txt
 ```
 Check the output at `/mnt/shared/p24.py.txt`.
+
+Run the program `p8.py`. And in the console give input `without,hello,bag,world`
+```
+$ docker run --rm -it -e PROGRAM_NAME='p8.py' -v /mnt/shared/:/app/program/output teamcloudyuga/pythonprog
+
+without,hello,bag,world
+
+output will be stored in file /mnt/shared/p8.py.txt
+```
+
+Check the output at `/mnt/shared/p8.py.txt`.
