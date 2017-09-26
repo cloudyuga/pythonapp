@@ -1,7 +1,7 @@
 # Pythonapp
-We are creating the new Docker image which is based on the `python:2.7` base image. In Given Dockerfile we have specified the all the configuration and the Entrypoint. When container with this image runs; then it will run the `demo.py` program. We have copied  the python programs in the Docker Image. When we runi the container with the help of the environment we decide which program to be run. For e.g. `-e PROGRAM_NAME='p1.py'`  pass environment variable  `p1.py`  so container will run `p1.py`. The `demo.py` run the `p1.py` program and save its output in `p1.py.txt` file. As we have mounted the `/app/program/output` directory of container with in the `/mnt/shared` directory of the Host. So the output file which are stored inside the `/app/program/output` will be availabel in the `/mnt/shared` directory.
+We have created the new Docker image `teamcloudyuga/pythonprog` with given `Dockerfile`. This image is using `python:2.7` as its base image. In given `Dockerfile`, we have specified the all the configuration and the Entrypoint. When container with this image runs; then it will run the `demo.py` program. We have copied  the python programs in the Docker Image. When we runi the container with the help of the environment we decide which program to be run. For e.g. `-e PROGRAM_NAME='p1.py'`  pass environment variable  `p1.py`  so container will run `p1.py`. The `demo.py` run the `p1.py` program and save its output in `p1.py.txt` file. As we have mounted the `/app/program/output` directory of container with in the `/mnt/shared` directory of the Host. So the output file which are stored inside the `/app/program/output` will be availabel in the `/mnt/shared` directory.
 
-Create a directory for mounting volume in the container.
+Create a directory for mounting volume in the container. We will have all the outputs here in this directory.
 ```
 $ sudo mkdir -p /mnt/shared
 ```
