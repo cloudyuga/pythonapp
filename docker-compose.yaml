@@ -1,9 +1,0 @@
-version: '2'
-services:
-    app:
-        build: .
-        volumes:
-          - db_data:/app/program/output
-        entrypoint: python demo.py
-volumes:
-   db_data:
