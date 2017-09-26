@@ -1,14 +1,14 @@
 # Pythonapp
+We are creating the new Docker image which is based on the `python:2.7` base image. In Given Dockerfile we have specified the all the configuration and the Entrypoint. When container with this image runs; then it will run the `demo.py` program. We have copied  the python programs in the Docker Image. When we runi the container with the help of the environment we decide which program to be run. For e.g. `-e PROGRAM_NAME='p1.py'`  pass environment variable  `p1.py`  so container will run `p1.py`. The `demo.py` run the `p1.py` program and save its output in `p1.py.txt` file. As we have mounted the `/app/program/output` directory of container with in the `/mnt/shared` directory of the Host. So the output file which are stored inside the `/app/program/output` will be availabel in the `/mnt/shared` directory.
 
 Create a directory for mounting volume in the container.
 ```
 $ sudo mkdir -p /mnt/shared
 ```
-Now run the program  `p1.py``
+Now run the program  `p1.py`
 ```
 $ docker run --rm -it -e PROGRAM_NAME='p1.py' -v /mnt/shared/:/app/program/output teamcloudyuga/pythonprog
 output will be stored in file /mnt/shared/p1.py.txt
-
 ```
 
 Check the output File.
